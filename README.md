@@ -3,7 +3,7 @@
 
 # pingo-common
 
-pingo-common provides a suite of commonly used code for when implementing decorators.
+pingo-common provides commonly used code for implementing decorators.
 
 
 ## Releases
