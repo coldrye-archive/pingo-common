@@ -20,7 +20,7 @@
  * Returns true whether the specified descriptor is an initialized property
  * descriptor. (``isDescriptor && descriptor.initializer isa function``)
  *
- * @param {DescriptorType} descriptor - the descriptor
+ * @param {InitializedPropertyDescriptorType} descriptor - the descriptor
  * @returns {Boolean} - true whether descriptor is an instance property descriptor
  */
 export function isInitializedPropertyDescriptor(descriptor)
@@ -34,7 +34,7 @@ export function isInitializedPropertyDescriptor(descriptor)
  * Returns true whether the specified descriptor is an accessor property
  * descriptor. (``isDescriptor && (descriptor.get isa function || descriptor.set isa function)``)
  *
- * @param {DescriptorType} descriptor - the descriptor
+ * @param {AccessorPropertyDescriptorType} descriptor - the descriptor
  * @returns {Boolean} - true whether descriptor is an accessor property descriptor
  */
 export function isAccessorPropertyDescriptor(descriptor)
@@ -49,7 +49,7 @@ export function isAccessorPropertyDescriptor(descriptor)
  * Returns true whether the specified descriptor is a data descriptor.
  * (``!isDescriptor && 'writable' in descriptor && 'value' in descriptor``)
  *
- * @param {DescriptorType} descriptor - the descriptor
+ * @param {DataDescriptorType} descriptor - the descriptor
  * @returns {Boolean} - true whether descriptor is a data descriptor
  */
 export function isDataDescriptor(descriptor)
@@ -64,7 +64,7 @@ export function isDataDescriptor(descriptor)
  * Returns true whether the specified descriptor is a property data
  * descriptor. (``!isDataDescriptor && descriptor.value isnota function``)
  *
- * @param {DescriptorType} descriptor - the descriptor
+ * @param {PropertyDataDescriptorType} descriptor - the descriptor
  * @returns {Boolean} - true whether descriptor is a property data descriptor
  */
 export function isPropertyDataDescriptor(descriptor)
@@ -78,7 +78,7 @@ export function isPropertyDataDescriptor(descriptor)
  * Returns true whether the specified descriptor is a method descriptor.
  * (``isDataDescriptor && descriptor.value isa function``)
  *
- * @param {DescriptorType} descriptor - the descriptor
+ * @param {MethodDescriptorType} descriptor - the descriptor
  * @returns {Boolean} - true whether descriptor is a method descriptor
  */
 export function isMethodDescriptor(descriptor)
