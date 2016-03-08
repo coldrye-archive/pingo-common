@@ -22,24 +22,11 @@ import * as utils from '../src/utils';
 describe('className()',
 function ()
 {
-    it('must throw on invalid target',
+    it('must return undefined on invalid target',
     function ()
     {
-        function tc1()
-        {
-            utils.className(null);
-        }
-        tc1.should.throw(
-            TypeError, 'target must be either a class or instance'
-        );
-
-        function tc2()
-        {
-            utils.className(undefined);
-        }
-        tc2.should.throw(
-            TypeError, 'target must be either a class or instance'
-        );
+        should.not.exist(utils.className(null));
+        should.not.exist(utils.className(undefined));
     });
 
     class TestClass

@@ -26,13 +26,17 @@
  */
 export function className(target)
 {
-    if (!target)
+    let result = undefined;
+
+    if (typeof target == 'function')
     {
-        throw new TypeError(
-            'target must be either a class or instance thereof'
-        );
+        result = target.name;
+    }
+    else if (target && target.constructor)
+    {
+        result = target.constructor.name;
     }
 
-    return typeof target == 'function' ? target.name : target.constructor.name;
+    return result;
 }
 
