@@ -47,3 +47,33 @@ function ()
     });
 });
 
+
+describe('extractFormalParameters()',
+function ()
+{
+    it('must throw on non function',
+    function ()
+    {
+        function tc1()
+        {
+            utils.extractFormalParameterList(null);
+        }
+        tc1.should.throw(TypeError, 'func must be a function');
+
+        function tc2()
+        {
+            utils.extractFormalParameterList();
+        }
+        tc2.should.throw(TypeError, 'func must be a function');
+    });
+
+    it('must return expected result',
+    function ()
+    {
+        /*eslint no-unused-vars:0*/
+        function func(a, b)
+        {}
+        utils.extractFormalParameterList(func).should.equal('a, b');
+    });
+});
+

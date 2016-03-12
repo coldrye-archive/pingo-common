@@ -22,7 +22,7 @@
  *
  * @protected
  * @param {TargetType} target - the target object or function
- * @returns {string} - the target's class name
+ * @returns {String} - the target's class name or undefined
  */
 export function className(target)
 {
@@ -38,5 +38,36 @@ export function className(target)
     }
 
     return result;
+}
+
+
+const REGEXP_FORMAL_PARAMETER_LIST = /^function [^(]*[(]([^)]*)[)]/;
+
+
+/**
+ * Extracts the formal parameter list from the specified function ``func``
+ * which is then to be included in a dynamically generated method or
+ * constructor.
+ *
+ * This is provided so that decorators asserting the number of formal
+ * parameters present will work as expected.
+ *
+ * Provided always, of course, that all decorators make use of this,
+ * otherwise, the user will have to apply decorators in a specific order.
+ *
+ * @param {Function} func - the function
+ * @throws {TypeError} - in case that func is not a function
+ * @returns {String} - the formal parameter list
+ */
+export function extractFormalParameterList(func)
+{
+    if (typeof func != 'function')
+    {
+        throw new TypeError(`func must be a function and not "${typeof func}"`);
+    }
+
+    const match = REGEXP_FORMAL_PARAMETER_LIST.exec(func.toString());
+
+    return match[1];
 }
 

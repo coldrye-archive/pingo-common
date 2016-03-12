@@ -1,3 +1,15 @@
+<a name="0.0.4"></a>
+## 0.0.4 (2016-03-12)
+
+
+* version bump v0.0.4 ([9abff0d](https://github.com/coldrye-es/pingo-common/commit/9abff0d))
+
+### feat
+
+* feat(factories): class and method factories ([4b07626](https://github.com/coldrye-es/pingo-common/commit/4b07626))
+
+
+
 <a name="0.0.3"></a>
 ## 0.0.3 (2016-03-08)
 
@@ -21,7 +33,6 @@
 ### docs
 
 * docs(README.md): minor changes ([be92853](https://github.com/coldrye-es/pingo-common/commit/be92853))
-
 
 
 
