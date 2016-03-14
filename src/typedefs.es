@@ -82,3 +82,33 @@
  * @property {Function} value - the method
  */
 
+
+/**
+ * @typedef {BoundDecoratingCtorType|UnboundDecoratingCtorType} DecoratingCtorType
+ */
+
+
+/**
+ * @typedef {function(self, target, args):void(0)} BoundDecoratingCtorType
+ */
+
+
+/**
+ * @typedef {function(target, args):void(0)} UnboundDecoratingCtorType
+ */
+
+
+/**
+ * @typedef {BoundDecoratingMethodType|UnboundDecoratingMethodType} DecoratingMethodType
+ */
+
+
+/**
+ * @typedef {function(self, method, args):*} BoundDecoratingMethodType
+ */
+
+
+/**
+ * @typedef {function(method, args):*} UnboundDecoratingMethodType
+ */
+

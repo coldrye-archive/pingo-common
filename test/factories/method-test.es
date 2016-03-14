@@ -57,7 +57,7 @@ function ()
             decoratedMethodFactory(function method() {});
         }
         tc1.should.throw(
-            TypeError, 'func must be of type UnboundDecoratingFunctionType'
+            TypeError, 'func must be of type UnboundDecoratingMethodType'
         );
 
         function tc2()
@@ -68,7 +68,7 @@ function ()
             );
         }
         tc2.should.throw(
-            TypeError, 'func must be of type UnboundDecoratingFunctionType'
+            TypeError, 'func must be of type UnboundDecoratingMethodType'
         );
     });
 

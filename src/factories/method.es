@@ -21,11 +21,22 @@ import {assertFunctionType, assertDecoratingType} from './assertions';
 
 
 /**
- * TBD:document
  * Factory for creating decorated methods.
  *
+ * This provides the user with the means to create a decorated version of
+ * the specified method.
+ *
+ * The so created method will have the same name and the same signature
+ * as the specified method.
+ *
+ * Please note that this realizes only the ``around`` call scenario
+ * by wrapping the call to the decorated method, which must be made by
+ * the decorating function, by a call to the decorating function.
+ * It is up to the decorating function to handle more specific call
+ * scenarios such as ``before`` or ``after``.
+ *
  * @param {Function} method - the target method
- * @param {DecoratingFunctionType} func - the decorating function
+ * @param {DecoratingMethodType} func - the decorating function
  * @param {Boolean} bound - true whether func is already bound
  * @returns {Function} - the decorated method
  */
@@ -38,7 +49,7 @@ export default function decoratedMethodFactory(method, func, bound = false)
         throw new TypeError('method must be a named function');
     }
 
-    assertDecoratingType('func', func, 'DecoratingFunctionType', bound);
+    assertDecoratingType('func', func, 'DecoratingMethodType', bound);
 
     const formalParameterList = extractFormalParameterList(method);
 

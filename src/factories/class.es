@@ -21,8 +21,17 @@ import {assertFunctionType, assertDecoratingType} from './assertions';
 
 
 /**
- * TBD:document
  * Factory for creating decorated classes.
+ *
+ * This provides the user with the means to create a conformant sub class of
+ * the decorated class that will call the specified ctor during instance
+ * construction.
+ *
+ * The so created class will have the same name and the constructor will
+ * have the same signature as the decorated class.
+ *
+ * Please note that this does not provide for any means to bind additional
+ * methods a/o properties to the class.
  *
  * @param {TargetType} target - the target
  * @param {DecoratingCtorType} ctor - the decorating ctor
