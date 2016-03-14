@@ -1,3 +1,16 @@
+<a name="0.0.5"></a>
+## 0.0.5 (2016-03-14)
+
+
+* version bump v0.0.5 ([85a5024](https://github.com/coldrye-es/pingo-common/commit/85a5024))
+
+### chore
+
+* chore(docs): improving api docs ([69cb103](https://github.com/coldrye-es/pingo-common/commit/69cb103))
+* chore(src): removing extraneous code ([84103a9](https://github.com/coldrye-es/pingo-common/commit/84103a9))
+
+
+
 <a name="0.0.4"></a>
 ## 0.0.4 (2016-03-12)
 
