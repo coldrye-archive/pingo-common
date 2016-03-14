@@ -55,6 +55,7 @@ const REGEXP_FORMAL_PARAMETER_LIST = /^function [^(]*[(]([^)]*)[)]/;
  * Provided always, of course, that all decorators make use of this,
  * otherwise, the user will have to apply decorators in a specific order.
  *
+ * @protected
  * @param {Function} func - the function
  * @throws {TypeError} - in case that func is not a function
  * @returns {String} - the formal parameter list

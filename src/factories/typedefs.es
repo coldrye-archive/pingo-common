@@ -16,24 +16,32 @@
  */
 
 
-import {extractFormalParameterList} from '../utils';
+/**
+ * @typedef {BoundDecoratingCtorType|UnboundDecoratingCtorType} DecoratingCtorType
+ */
 
 
 /**
- * @private
+ * @typedef {function(self:Object, target:Function, args:Array):void(0)} BoundDecoratingCtorType
  */
-export function buildDecoratingTypeErrorMessage(name, func, type, bound)
-{
-    let actualType = typeof func;
 
-    /*istanbul ignore else*/
-    if (func)
-    {
-        const fpl = extractFormalParameterList(func);
-        actualType = `${actualType} ${func.name}(${fpl}) {...}`;
-    }
 
-    const expectedType = (bound ? 'Bound' : 'Unbound') + type;
-    return `${name} must be of type ${expectedType} and not "${actualType}"`;
-}
+/**
+ * @typedef {function(target:Function, args:Array):void(0)} UnboundDecoratingCtorType
+ */
+
+
+/**
+ * @typedef {BoundDecoratingMethodType|UnboundDecoratingMethodType} DecoratingMethodType
+ */
+
+
+/**
+ * @typedef {function(target:TargetType, method:Function, args:Array):*} BoundDecoratingMethodType
+ */
+
+
+/**
+ * @typedef {function(method:Function, args:Array):*} UnboundDecoratingMethodType
+ */
 

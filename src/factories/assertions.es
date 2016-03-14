@@ -19,6 +19,9 @@
 import {buildDecoratingTypeErrorMessage} from './utils';
 
 
+/**
+ * @private
+ */
 export function assertFunctionType(name, func)
 {
     if (typeof func != 'function')
@@ -30,6 +33,9 @@ export function assertFunctionType(name, func)
 }
 
 
+/**
+ * @private
+ */
 export function assertDecoratingType(name, func, type, bound)
 {
     const expectedLength = bound ? 3 : 2;
