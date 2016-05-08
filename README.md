@@ -27,7 +27,7 @@ See the [contributing guidelines](https://github.com/coldrye-es/pingo-common/blo
 
 ### Contributors
 
- - [Carsten Klein](https://github.com/silkentrance) **Maintainer**
+See [contributors](https://github.com/coldrye-es/pingo-common/graphs/contributors) for more information.
 
 
 ### Building
